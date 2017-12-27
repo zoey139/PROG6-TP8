@@ -1,0 +1,92 @@
+supradine maniesia
+
+revision shelle :
+
+stat --format=%x fichier :dernier acces 
+stat --format=%x fichier :derniere modification
+
+echo "Entrez le nom du répertoire à créer : "
+read nom : lecture du clavier 
+
+
+tr:
+
+1/remplacement de caracteres :
+$ echo abcd | tr bd 24
+a2c4
+
+$ echo abcd | tr "[a-z]" "[A-Z]"
+ABCD
+
+$ cat fic1
+ceci est un test
+$ tr "[a-z]" "[A-Z]" < fic1
+CECI EST UN TEST
+
+2/suppression d'un caractere :
+
+$ echo "Linux Pratique HS N°26 – Février/Mars 2013 – En kiosque" | tr -dc a-zA-Z; echo
+
+
+sed :
+
+Bonjour,
+
+
+Ceci est un fichier de test.
+
+Ici la ligne numéro 4.
+
+
+# ceci pourrait être un commentaire
+
+Ici la ligne numéro 7.
+
+
+Au revoir
+
+1/$ sed '' test.txt
+Bonjour,
+
+Ceci est un fichier de test.
+Ici la ligne numéro 4.
+
+# ceci pourrait être un commentaire
+Ici la ligne numéro 7.
+
+Au revoir
+
+
+2/$ sed -e '4 d; 7 d' test.txt
+Bonjour,
+
+Ceci est un fichier de test.
+
+# ceci pourrait être un commentaire
+
+Au revoir
+
+3/$ sed '4,7 d' test.txt
+Bonjour,
+
+Ceci est un fichier de test.
+
+Au revoir
+
+4/$ sed '/^#/d' test.txt
+Bonjour,
+
+Ceci est un fichier de test.
+Ici la ligne numéro 4.
+
+Ici la ligne numéro 7.
+
+Au revoir
+
+
+gprof:
+gcc -pg somme_entiers.c -o somme_entiers
+
+$ ./somme_entier
+
+$ gprof ./somme_entier | less

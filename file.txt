@@ -8,17 +8,34 @@ git log --oneline   (permet de se retrouver plus rapidement dans le log)
 
 git log --oneline -p index.html   (permet de voir que les commit du fichier index.txt)
 
+
 git checkout id   (permet juste de voir l'etat des fihciers au moment du commit id mais
                    ne permet pas de faire des modifications) 
+
 
 git checkout id index.html (permet de modifier le fichier index.html en retournant a son
                              ancienne version)
 
+
 git revert id               (enleve les modifications du au commit id)
 
-git reset HEAD(ou --) index.html      (enleve index.html des fichiers suivis)
+
+git revert id nom_fichier     (pour preciser le fichier)
+
+
+git reset HEAD(ou --) index.html      (enleve index.html des fichiers 
+
 
 git add .                   (comme git add --all sauf que ça ne commit pas les fichiers 
                                 supprimer du commit)
 
+
 git reset --hard            (revenir en arriere au dernier commit)
+
+
+git reset id         (permet de revenir a id en preservant tous l'espace de travail ainsi
+                        que les commit, on fait que revenir en arriere dans l'historique)
+
+
+
+git reset id --hard     (+enleve les modifs)
