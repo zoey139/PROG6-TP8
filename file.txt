@@ -23,7 +23,7 @@ git revert id               (enleve les modifications du au commit id)
 git revert id nom_fichier     (pour preciser le fichier)
 
 
-git reset HEAD(ou --) index.html      (enleve index.html des fichiers 
+git reset HEAD(ou --) index.html      (enleve index.html des fichiers stagé)
 
 
 git add .                   (comme git add --all sauf que ça ne commit pas les fichiers 
